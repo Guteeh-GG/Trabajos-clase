@@ -9,7 +9,10 @@
     
 <?php
 
+echo "<p>Actuliza la página para ver la línea de diferente tamaño</p>";
 
+$Tamanio = rand(10, 1000);
+echo "<hr style= 'width: {$Tamanio}px;'>";
 
 ?>
 
