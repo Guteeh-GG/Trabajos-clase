@@ -76,18 +76,31 @@ body {
     $Sumaj2 = $Dado3 + $Dado4;
     $MasAlto = max ($Sumaj1, $Sumaj2);
 
-    // comprobar que si hay un jugador con pares es automaticamente ganador 
+    if ( $Dado == $Dado2){
+
+    }else if ($Dado3 !== $Dado4){
+
+        echo "El ganador es el jugador 1";
+    }
+
+    if ($Dado3 == $Dado4){
+
+    } else if ( $Dado !== $Dado2) {
+    
+    echo "El gandor es el jugador 2";
+  
+    }
 
     if ( $Dado == $Dado2){
 
-    }else if ($Dado3 == $Dado4){
 
+  }else if ($Dado3 == $Dado4){
 
-    }else if ($Sumaj1 == $Sumaj2){
+  }else if ($Sumaj1 == $Sumaj2){
 
-echo "HAY EMPATE!";
+echo "HAY EMPATE";
 
-    }
+  }
 
 if ($Sumaj1 > $Sumaj2){
 
