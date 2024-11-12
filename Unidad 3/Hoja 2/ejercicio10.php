@@ -34,7 +34,6 @@
     $color1 = 'red'; 
     $color2 = 'white'; 
 
-
     for ($i = 0; $i < $numcirculos; $i++) {
         $tamanio = $maxtamanio - $i * ($maxtamanio / $numcirculos);
         $color = ($i % 2 == 0) ? $color1 : $color2; 
