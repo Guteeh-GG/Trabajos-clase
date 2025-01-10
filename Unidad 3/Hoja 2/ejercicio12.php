@@ -42,6 +42,7 @@ $numcirculos = rand(1, 10);
 
             $radio = rand(10,50);
             $diametro = $radio *2;
+
             
             echo '<td><div class="circle" style="width: ' .$diametro . 'px; height: ' .$diametro . 'px;"></div></td>';
         }
