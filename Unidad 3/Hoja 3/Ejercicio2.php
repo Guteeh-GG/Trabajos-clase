@@ -18,14 +18,14 @@
 // "Caballito de mar", etc.), en el mismo orden. Elija un valor del índice al azar para
 // mostrar tanto el dibujo como el texto.
 
-$animals = array("ballena.jpg", "caballito-de-mar.jpg", "conejo.jpg", "elefante.jpg", "giraffe.jpg");
-$nombresAnimales = array("Ballena", "Caballito de mar", "Conejo", "Elefante", "Giraffe");
+$animales = array("ballena.jpg", "caballito-de-mar.jpg", "conejo.jpg", "elefante.jpg", "giraffe.jpg"); 
+$nombresAnimales = array("ballena", "caballito de mar", "conejo", "elefante", "giraffe");
 
-$index = rand(0, count($animals) - 1);
+$index = rand(1, count($animales));
 
-echo "<img src='/Unidad 3/Hoja 3/animales{$animals[$index]}.jpg'>";
+echo "<img src='./animales/animales{$index}.jpg'>"; 
 
-echo "<br>{$nombresAnimales[$index]}";
+echo "<br>{$animales[$index -1]}";
 
 // 3.2. Con una matriz de dos dimensiones:
 // Cree una matriz en la que cada elemento sea una matriz con el nombre del animal
