@@ -23,3 +23,4 @@ echo "<br><img src='../../EJERCICIOS 0/Dado{$tirada}.webp'>";
 
 </body>
 </html>
+eresfeo13
