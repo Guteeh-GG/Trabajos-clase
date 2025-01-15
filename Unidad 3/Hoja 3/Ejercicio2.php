@@ -21,11 +21,11 @@
 $animales = array("ballena.jpg", "caballito-de-mar.jpg", "conejo.jpg", "elefante.jpg", "giraffe.jpg"); 
 $nombresAnimales = array("ballena", "caballito de mar", "conejo", "elefante", "giraffe");
 
-$index = rand(1, count($animales));
+$index = rand(1, count($animales)); //Funcion para sacar el animal aleatorio empezando desde 1 y contando los que hay, ya que son Strings
 
 echo "<img src='./animales/animales{$index}.jpg'>"; 
 
-echo "<br>{$animales[$index -1]}";
+echo "<br>{$nombresAnimales[$index -1]}"; //IMPORTANTE EN EL INDEX QUE ES DONDE HEMOS ALEATORIZADO LAS FICHAS, RESTAR 1 YA QUE ES UN ARRAY Y TIENE QUE EMPEZAR A SACAR FICHAS DESDE 1
 
 // 3.2. Con una matriz de dos dimensiones:
 // Cree una matriz en la que cada elemento sea una matriz con el nombre del animal
@@ -33,11 +33,22 @@ echo "<br>{$animales[$index -1]}";
 // "caballito-mar.png", etc.) como elementos. Elija un valor del índice al azar para
 // mostrar tanto el dibujo como el texto.
 
+$animalesMatriz = array(
+    array("nombre" => "ballena", "fichero" => "ballena.jpg"),
+    array("nombre" => "caballito de mar", "fichero" => "caballito-de-mar.jpg"),
+    array("nombre" => "conejo", "fichero" => "conejo.jpg"),
+    array("nombre" => "elefante", "fichero" => "elefante.jpg"),);
 
+// El array asocitivo para mostrar el animal relacionado a su ficha.
 
+$index = rand(1, count($animalesMatriz));
 
-?>
+echo "<img src='./animales/animales{$index}.jpg'>";
 
+echo "<br>{$animalesMatriz[$index -1]["nombre"]}";
 
+// El mismo proceso para mostrar el animal y su ficha correspondiente.
+
+ ?>
 </body>
 </html>
