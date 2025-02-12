@@ -23,9 +23,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subtotalB = $b * $precioB;
     $subtotalC = $c * $precioC;
     $total = $subtotalA + $subtotalB + $subtotalC;
-    $iva = $total * 0.20;
-    $totalConIVA = $total + $iva;
 
+    //Operacion para comprobar si tiene descuento en funcion de los pedidos
+
+    $totalProductos = $a + $b +$c;
+    $descuento=0;
+    if ($totalProductos > 20){
+        $descuento = 25;
+    }else if ($totalProductos >10){
+        $descuento = 10;
+    }elseif ($totalProductos > 5){
+        $descuento = 5;
+    }
+    
+        
+    $descuentoAplicado = ($total * $descuento) /100;
+    $TotalFinal = $total - $descuentoAplicado;
+    $iva = $TotalFinal * 0.20;
+    $totalConIVA = $TotalFinal + $iva;
+
+
+    
     $fecha = date("d-m-Y");
 ?>
 
@@ -34,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <th>Artículo</th>
         <th>Unidades</th>
         <th>Precio Unitario</th>
+        <th>Descuento</th>
         <th>Subtotal</th>
     </tr>
     <tr>
@@ -59,6 +78,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <td><?php echo number_format($total, 2); ?>€</td>
     </tr>
     <tr>
+        <td colspan="3"><strong>Descuento</strong></td>
+        <td><?php echo $descuento ?>%</td>
+    </tr>
+    <tr>
+        <td colspan="3"><strong>Precio con descuento</strong></td>
+        <td><?php echo $TotalFinal ?>%</td>
+    </tr>
+    <tr>
         <td colspan="3"><strong>IVA (20%)</strong></td>
         <td><?php echo number_format($iva, 2); ?>€</td>
     </tr>
@@ -75,6 +102,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p>No se han recibido datos.</p>";
 }
 ?>
-<a href="./Ejercicio2.php">Volver a la página anterior</a>
+<a href="./Ejercicio3.php">Volver a la página anterior</a>
 </body>
 </html>

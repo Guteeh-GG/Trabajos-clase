@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 3</title>
 </head>
 <body>
     <h2>Formulario de Pedido</h2>
-    <form action="R_Ejercicio2.php" method="post">
+    <form action="R_Ejercicio3.php" method="post">
         <label for="a">Artículo A (5.99€)</label>
         <input type="number" id="a" name="a" min="0" required><br><br>
         
